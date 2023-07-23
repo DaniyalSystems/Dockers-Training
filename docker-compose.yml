@@ -1,0 +1,26 @@
+version: '3'
+services:
+  billing-service:
+    build:
+      context: ./billing-service
+      dockerfile: Dockerfile
+    ports:
+      - '5006:5006'
+  inventory-service:
+    build:
+      context: ./inventory-service
+      dockerfile: Dockerfile
+    ports:
+      - '5008:5008'
+  shipping-service:
+    build:
+      context: ./shipping-service
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+  users-service:
+    build:
+      context: ./users-service
+      dockerfile: Dockerfile
+    ports:
+      - '5002:5002'
